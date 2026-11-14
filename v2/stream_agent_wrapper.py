@@ -29,6 +29,32 @@ class StreamWrapper(gym.Wrapper):
         else:
             raise Exception("Could not find emulator!")
 
+    def __getattr__(self, name):
+        """Delegate legacy SB3 attribute lookups without Gymnasium's deprecation warning.
+
+        Stable-Baselines3 2.3.x uses plain getattr() in SubprocVecEnv for both
+        get_attr() and env_method(). Gymnasium 0.29 warns when Wrapper.__getattr__
+        forwards those lookups. Resolve them through the supported
+        get_wrapper_attr() API on the wrapped environment instead.
+        """
+        if name.startswith("_"):
+            raise AttributeError(
+                f"{type(self).__name__!s} has no attribute {name!r}"
+            )
+
+        wrapped_env = self.__dict__.get("env")
+        if wrapped_env is None:
+            raise AttributeError(
+                f"{type(self).__name__!s} has no attribute {name!r}"
+            )
+
+        try:
+            return wrapped_env.get_wrapper_attr(name)
+        except AttributeError:
+            raise AttributeError(
+                f"{type(self).__name__!s} has no attribute {name!r}"
+            ) from None
+
     def step(self, action):
 
         x_pos = self.emulator.memory[X_POS_ADDRESS]
