@@ -7,6 +7,30 @@ import gymnasium as gym
 X_POS_ADDRESS, Y_POS_ADDRESS = 0xD362, 0xD361
 MAP_N_ADDRESS = 0xD35E
 
+def _resolve_wrapper_attr(env, name):
+    """Resolve an attribute through a Gymnasium wrapper chain without legacy forwarding.
+
+    Gymnasium 0.29's Wrapper.__getattr__ is deprecated. Walking the public
+    env links with object.__getattribute__ avoids invoking that fallback
+    while still allowing attributes on intermediate wrappers or the base env.
+    """
+    current = env
+    visited = set()
+    while current is not None and id(current) not in visited:
+        visited.add(id(current))
+        try:
+            return object.__getattribute__(current, name)
+        except AttributeError:
+            pass
+        try:
+            current = object.__getattribute__(current, "env")
+        except AttributeError:
+            current = None
+    raise AttributeError(
+        f"{type(env).__name__!s} and its wrapped environments have no attribute {name!r}"
+    )
+
+
 class StreamWrapper(gym.Wrapper):
     def __init__(self, env, stream_metadata={}):
         super().__init__(env)
@@ -30,12 +54,12 @@ class StreamWrapper(gym.Wrapper):
             raise Exception("Could not find emulator!")
 
     def __getattr__(self, name):
-        """Delegate legacy SB3 attribute lookups without Gymnasium's deprecation warning.
+        """Resolve SB3 VecEnv lookups without deprecated wrapper forwarding.
 
-        Stable-Baselines3 2.3.x uses plain getattr() in SubprocVecEnv for both
-        get_attr() and env_method(). Gymnasium 0.29 warns when Wrapper.__getattr__
-        forwards those lookups. Resolve them through the supported
-        get_wrapper_attr() API on the wrapped environment instead.
+        SB3 2.3.x uses plain getattr() in SubprocVecEnv.get_attr() and
+        env_method(). Gymnasium's get_wrapper_attr() can itself reach the
+        deprecated Wrapper.__getattr__ path on nested wrappers in the pinned
+        Gymnasium 0.29 dependency, so resolve the wrapper chain directly.
         """
         if name.startswith("_"):
             raise AttributeError(
@@ -49,7 +73,7 @@ class StreamWrapper(gym.Wrapper):
             )
 
         try:
-            return wrapped_env.get_wrapper_attr(name)
+            return _resolve_wrapper_attr(wrapped_env, name)
         except AttributeError:
             raise AttributeError(
                 f"{type(self).__name__!s} has no attribute {name!r}"
