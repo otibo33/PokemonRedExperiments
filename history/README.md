@@ -36,7 +36,3 @@ Each item is kept in its own dated folder inside the ZIP. Repeated source filena
 The independent from-scratch `Pokémon Red Lab` project is excluded. It was developed as a separate project and is not part of this `PokemonRedExperiments/v2` history.
 
 This history branch is an archive only. It does not replace `master`, and the main branch and existing working branches were not moved by this source-history commit.
-
-## Privacy
-
-The updated archive was scanned after extraction. No occurrences remained for the known local username, media-volume label, known mount path, non-generic home paths, or the previously observed personal email address.
