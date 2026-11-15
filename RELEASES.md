@@ -25,8 +25,4 @@ The complete table covers all **34 dated patch/source iterations** and **10 stan
 
 [Open history/MAP_PROGRESS.md](history/MAP_PROGRESS.md).
 
-Evidence note: the earlier direct location feedback said **Mt. Moon before the fossils**. The later November 15 rank-based training telemetry reported **rank 5 / map ID 51 — Viridian Forest**. The archive keeps these as separate evidence contexts rather than pretending they are one continuous run. The repository's `v2/map_data.json` identifies map ID 51 as Viridian Forest and IDs 59–61 as Mt. Moon areas.
-
-## Privacy and branch safety
-
-Installation examples use generic project-relative paths. The patch archives were scanned for the local username, media-volume label, known mount path, and previously observed personal email pattern; no matches were found. This archive is on a separate branch created from the existing master head. The master branch was not moved or edited.
+Evidence note: the earlier direct location feedback said **Mt. Moon before the fossils**. The later November 15 rank-based training telemetry reported **rank 5 / map ID 51 — Veridian Forest**. The archive keeps these as separate evidence contexts rather than pretending they are one continuous run. The repository's `v2/map_data.json` identifies map ID 51 as Veridian Forest and IDs 59–61 as Mt. Moon areas.
