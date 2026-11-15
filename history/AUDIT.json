@@ -1,12 +1,18 @@
 {
   "source_archives_recovered": 35,
-  "standalone_python_snapshots_and_helpers": 17,
-  "python_source_files_including_tests_and_patchers": 141,
+  "python_source_files": 141,
+  "dated_patch_source_iterations_indexed": 34,
+  "standalone_snapshots_and_helpers_indexed": 10,
   "patch_diff_files": 5,
   "documentation_files": 42,
   "coverage_start": "2026-11-08",
   "coverage_end": "2026-11-15",
-  "missing_recovered_archives": [],
+  "furthest_direct_location_reported": "Mt. Moon, before the fossil encounter",
+  "later_rank_based_telemetry": "Rank 5 / map ID 51 — Viridian Forest",
+  "map_progress_index_files": [
+    "MAP_PROGRESS.md",
+    "MAP_PROGRESS.json"
+  ],
   "privacy_scan": {
     "known_username_matches": 0,
     "media_volume_label_matches": 0,

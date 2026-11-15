@@ -1,0 +1,281 @@
+{
+  "scope": "Recovered PokemonRedExperiments/v2 source history from 2026-11-08 through 2026-11-15",
+  "interpretation_note": "Older direct Mt. Moon report and later rank-based Viridian Forest telemetry are retained as distinct observations because their run/configuration continuity is not established.",
+  "map_id_reference": {
+    "51": "Viridian Forest",
+    "59": "Mt. Moon (Route 3 entrance)",
+    "60": "Mt. Moon B1F",
+    "61": "Mt. Moon B2F",
+    "92": "Vermilion Gym"
+  },
+  "furthest_direct_location_reported": "Mt. Moon, before the fossil encounter",
+  "later_rank_based_telemetry": "Rank 5 / map ID 51 (Viridian Forest)",
+  "versions": [
+    {
+      "date": "2026-11-08",
+      "version": "01_pokemon_red_training_patch",
+      "region": "Mt. Moon — before the fossils",
+      "evidence": "Direct user feedback about the baseline run: the agent was stuck in Mt. Moon before reaching the fossils. No exact map ID or timestep was attached."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "01_training_patch_moon",
+      "region": "Mt. Moon — before the fossils (last directly reported location)",
+      "evidence": "This Mt. Moon-focused patch follows the direct baseline report. No separate post-patch report confirms that the fossil encounter was completed."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "02_tensorboard_image_update",
+      "region": "Not reported for this iteration",
+      "evidence": "Image/visualization update; no distinct gameplay run result or new map location was reported."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "03_full_rewards_current_run",
+      "region": "Not reported for this iteration",
+      "evidence": "Reward update; the retained artifact/feedback does not tie a new furthest-map result specifically to this build."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "04_tensorboard_safe_update",
+      "region": "Not reported for this iteration",
+      "evidence": "Safe callback update; no distinct gameplay location result was reported."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "05_tensorboard_callback_safe_update",
+      "region": "Not reported for this iteration",
+      "evidence": "Callback-only update; no gameplay movement result was reported."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "06_map_resolution_update",
+      "region": "Not reported for this iteration",
+      "evidence": "Map image-resolution update; it changes visualization rather than game navigation."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "07_tensorboard_maps_only",
+      "region": "Not reported for this iteration",
+      "evidence": "TensorBoard map-image logging update; no gameplay movement result was reported."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "08_tensorboard_map_only",
+      "region": "Not reported for this iteration",
+      "evidence": "TensorBoard map-image logging update; no gameplay movement result was reported."
+    },
+    {
+      "date": "2026-11-10",
+      "version": "01_progress_history_fix",
+      "region": "Not reported for this iteration",
+      "evidence": "Progress-history instrumentation change; it improves tracking but no new in-game region was reported for this code version."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "01_capture_aware",
+      "region": "Not reported for this iteration",
+      "evidence": "Capture/Dex reward logic; no version-specific training map result was retained."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "02_capture_hm_aware",
+      "region": "Not reported for this iteration",
+      "evidence": "Capture and HM awareness reward logic; no version-specific training map result was retained."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "03_capture_hm_party_tensorboard",
+      "region": "Not reported for this iteration",
+      "evidence": "Capture/HM/party telemetry update; no version-specific training map result was retained."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "04_party_visual",
+      "region": "Not reported for this iteration",
+      "evidence": "Party visualization and related metrics; no distinct map-progression result was reported."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "05_party_tensorboard_fix",
+      "region": "Not reported for this iteration",
+      "evidence": "Party dashboard callback integration fix; no distinct map-progression result was reported."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "06_tensorboard_callback_fix",
+      "region": "Not reported for this iteration",
+      "evidence": "Moves party-image logging into the active training callback; no gameplay map result was reported."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "07_most_advanced_party",
+      "region": "Not reported for this iteration",
+      "evidence": "Tracks the party associated with the leading worker; no actual furthest-map location was reported for this snapshot."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "08_balanced_diverse_party",
+      "region": "Not reported for this iteration",
+      "evidence": "Party size/diversity and balance reward update; no version-specific map result was reported."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "09_party_visual_env",
+      "region": "Not reported for this iteration",
+      "evidence": "Party visualization environment update; no gameplay map result was reported."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "10_starter_diversity",
+      "region": "Not reported for this iteration",
+      "evidence": "Starter-selection diversity reward update; no version-specific map result was reported."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "11_party_level_spread",
+      "region": "Not reported for this iteration",
+      "evidence": "Party level-spread reward correction; no version-specific map result was reported."
+    },
+    {
+      "date": "2026-11-13",
+      "version": "01_collection_tuning",
+      "region": "Not reported for this iteration",
+      "evidence": "Collection reward tuning; no version-specific furthest-map result was retained."
+    },
+    {
+      "date": "2026-11-13",
+      "version": "02_logger_key_fix",
+      "region": "Not reported for this iteration",
+      "evidence": "TensorBoard logger-key collision fix; no gameplay movement change or map result was reported."
+    },
+    {
+      "date": "2026-11-13",
+      "version": "03_hm_awareness",
+      "region": "Not reported for this iteration",
+      "evidence": "HM carrier/readiness awareness patch; no version-specific training map result was retained."
+    },
+    {
+      "date": "2026-11-13",
+      "version": "04_hm_field_awareness",
+      "region": "Not reported for this iteration",
+      "evidence": "Adds HM field-use tracking and reward signals; no version-specific furthest-map result was retained."
+    },
+    {
+      "date": "2026-11-13",
+      "version": "05_capture_and_hm_awareness",
+      "region": "Not reported for this iteration",
+      "evidence": "Combines collection and HM-awareness signals; no version-specific furthest-map result was retained."
+    },
+    {
+      "date": "2026-11-14",
+      "version": "01_party_sprite_type_fix",
+      "region": "Not reported for this iteration",
+      "evidence": "Party sprite/type metadata correction; no gameplay map result was reported."
+    },
+    {
+      "date": "2026-11-14",
+      "version": "02_duplicate_species_fix",
+      "region": "Not reported for this iteration",
+      "evidence": "Duplicate species/capture reward correction; no version-specific map result was reported."
+    },
+    {
+      "date": "2026-11-14",
+      "version": "03_duplicate_capture_healing",
+      "region": "Not reported for this iteration",
+      "evidence": "Duplicate-capture and lead-survival/healing reward update; no version-specific furthest-map result was reported."
+    },
+    {
+      "date": "2026-11-15",
+      "version": "01_humanlike_progression",
+      "region": "No completed map milestone recorded",
+      "evidence": "This alternative goal-conditioned experiment was not adopted as the continuing training line; development returned to the original PPO v2 run."
+    },
+    {
+      "date": "2026-11-15",
+      "version": "02_exploration_speed",
+      "region": "Viridian Forest — rank 5, map ID 51",
+      "evidence": "At approximately 47.33M aggregate timesteps, the best reported story-map milestone was rank 5/map ID 51. Repository map data identifies map ID 51 as Viridian Forest."
+    },
+    {
+      "date": "2026-11-15",
+      "version": "03_directional_exploration",
+      "region": "Viridian Forest — rank 5, map ID 51",
+      "evidence": "At approximately 54.07M aggregate timesteps, best story progress remained rank 5/map ID 51 (Viridian Forest). Mean lifetime coverage was about 175 unique tiles and 4.33 unique maps per worker; those coverage values do not mean the story milestone advanced."
+    },
+    {
+      "date": "2026-11-15",
+      "version": "04_live_party_visual_update",
+      "region": "Viridian Forest — rank 5, map ID 51 (last surrounding telemetry)",
+      "evidence": "This was an observability update, not a new gameplay policy. The surrounding training feedback still reported rank 5/map ID 51; no new region was attributed to the dashboard."
+    },
+    {
+      "date": "2026-11-15",
+      "version": "05_vermilion_gym_progression",
+      "region": "Viridian Forest — rank 5, map ID 51; Vermilion Gym not reached",
+      "evidence": "At approximately 58.49M aggregate timesteps, best story progress remained rank 5/map ID 51 (Viridian Forest). Vermilion Gym (map ID 92) had not been reached."
+    }
+  ],
+  "standalone_snapshots": [
+    {
+      "date": "2026-11-08",
+      "version": "01_initial_training",
+      "region": "Mt. Moon — before the fossils",
+      "evidence": "The standalone initial environment/trainer snapshot belongs to the baseline run for which the user reported being stuck in Mt. Moon before the fossils."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "01_tensorboard_image",
+      "region": "Not reported for this snapshot",
+      "evidence": "Visualization helper; no new gameplay map result was reported."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "02_tensorboard_minimal",
+      "region": "Not reported for this snapshot",
+      "evidence": "Minimal callback snapshot; no gameplay location result was reported."
+    },
+    {
+      "date": "2026-11-09",
+      "version": "03_tensorboard_safe",
+      "region": "Not reported for this snapshot",
+      "evidence": "Safe callback snapshot; no gameplay location result was reported."
+    },
+    {
+      "date": "2026-11-10",
+      "version": "01_progress_history",
+      "region": "Not reported for this snapshot",
+      "evidence": "Standalone progress-history environment/callback snapshot; no new map region was reported with this file snapshot."
+    },
+    {
+      "date": "2026-11-10",
+      "version": "02_optimization_helpers",
+      "region": "Not reported for this snapshot",
+      "evidence": "Patch helpers for emulator tick optimization; no new gameplay map result was reported."
+    },
+    {
+      "date": "2026-11-12",
+      "version": "01_party_visual_versions",
+      "region": "Not reported for these snapshots",
+      "evidence": "Standalone callback versions for party visualization; no version-specific map result was reported."
+    },
+    {
+      "date": "2026-11-13",
+      "version": "01_level_spread_fix",
+      "region": "Not reported for this snapshot",
+      "evidence": "Standalone environment/callback level-spread correction; no gameplay map result was reported."
+    },
+    {
+      "date": "2026-11-13",
+      "version": "02_logger_hm_fixes",
+      "region": "Not reported for this snapshot",
+      "evidence": "Logger/HM test helper snapshots; no gameplay map result was reported."
+    },
+    {
+      "date": "2026-11-13",
+      "version": "03_tensorboard_trim",
+      "region": "Not reported for this snapshot",
+      "evidence": "TensorBoard image trimming utility; it does not change game navigation."
+    }
+  ]
+}

@@ -11,6 +11,13 @@ This is a chronological source archive for the PokémonRedExperiments/v2 workstr
   - Patch-format diffs and the READMEs included with the source artifacts.
   - A detailed `MANIFEST.json` with archive/date/file paths and SHA-256 hashes.
   - `AUDIT.json` with recovery counts and privacy scan status.
+  - `MAP_PROGRESS.md` and `MAP_PROGRESS.json`, indexing the furthest reported map region for every dated source iteration and standalone snapshot.
+
+## Map progress at a glance
+
+The furthest direct location explicitly reported in the earlier feedback was **Mt. Moon, before the fossil encounter**. Later rank-based telemetry for the November 15 exploration/progression versions reported **rank 5 / map ID 51 — Viridian Forest**. The map index preserves both observations and flags unreported iterations instead of guessing.
+
+[Open the full per-version map progress table](MAP_PROGRESS.md).
 
 ## Chronology
 
@@ -32,4 +39,4 @@ This history branch is an archive only. It does not replace `master`, and the ma
 
 ## Privacy
 
-The archive was scanned after extraction. No occurrences remained for the known local username, media-volume label, known mount path, non-generic home paths, or the previously observed personal email address.
+The updated archive was scanned after extraction. No occurrences remained for the known local username, media-volume label, known mount path, non-generic home paths, or the previously observed personal email address.
