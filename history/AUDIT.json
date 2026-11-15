@@ -1,0 +1,23 @@
+{
+  "source_archives_recovered": 35,
+  "standalone_python_snapshots_and_helpers": 17,
+  "python_source_files_including_tests_and_patchers": 141,
+  "patch_diff_files": 5,
+  "documentation_files": 42,
+  "coverage_start": "2026-11-08",
+  "coverage_end": "2026-11-15",
+  "missing_recovered_archives": [],
+  "privacy_scan": {
+    "known_username_matches": 0,
+    "media_volume_label_matches": 0,
+    "known_mount_path_matches": 0,
+    "non_generic_home_path_matches": 0,
+    "known_personal_email_matches": 0
+  },
+  "scope_exclusions": [
+    "Separate from-scratch Pokemon Red Lab project",
+    "Binary ROMs and save states",
+    "Training checkpoints and TensorBoard event logs"
+  ],
+  "archive_validation": "ZIP integrity test passed"
+}
